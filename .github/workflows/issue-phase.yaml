@@ -12,4 +12,4 @@ jobs:
       - uses: matrixorigin/CI/actions/assign-role-label@add-action
         with:
           github-token: ${{ secrets.TOKEN_ACTION }}
-          correspondence: "{\"admin\":\"phase/testing\"}"
+          correspondence: "{\"admin\":\"phase/admin\",\"qa-test\":\"phase/testing\"}"
