@@ -1,0 +1,15 @@
+name: Associate-issue-project
+
+on:
+  issues:
+    types:
+      - assigned
+
+jobs:
+  auto-assign-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: matrixorigin/CI/actions/assign-role-label@add-action
+        with:
+          github-token: ${{ secrets.TOKEN_ACTION }}
+          correspondence: "{\"admin\":\"phase/testing\"}"
